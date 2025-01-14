@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/NutritionNest/static/css/main.50dccaf5.css",
-    "main.js": "/NutritionNest/static/js/main.0208c735.js",
-    "index.html": "/NutritionNest/index.html",
-    "main.50dccaf5.css.map": "/NutritionNest/static/css/main.50dccaf5.css.map",
-    "main.0208c735.js.map": "/NutritionNest/static/js/main.0208c735.js.map"
+    "main.css": "https://nutritionnest.github.io/NutritionNest/static/css/main.50dccaf5.css",
+    "main.js": "https://nutritionnest.github.io/NutritionNest/static/js/main.b38d5ba6.js",
+    "index.html": "https://nutritionnest.github.io/NutritionNest/index.html",
+    "main.50dccaf5.css.map": "https://nutritionnest.github.io/NutritionNest/static/css/main.50dccaf5.css.map",
+    "main.b38d5ba6.js.map": "https://nutritionnest.github.io/NutritionNest/static/js/main.b38d5ba6.js.map"
   },
   "entrypoints": [
     "static/css/main.50dccaf5.css",
-    "static/js/main.0208c735.js"
+    "static/js/main.b38d5ba6.js"
   ]
 }
