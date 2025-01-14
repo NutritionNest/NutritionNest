@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./App.css";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("welcome");
+
+  // Check the current hostname
+  const hostname = window.location.hostname;
+
+  useEffect(() => {
+    // Check the current hostname
+    const hostname = window.location.hostname;
+
+    // If the app is running on localhost or 127.0.0.1, prepend "DEV" to the title
+    if (hostname === "localhost" || hostname === "127.0.0.1") {
+      document.title = `DEV - NutritionNest`;
+    } else {
+      document.title = `NutritionNest`;
+    }
+  }, []);
 
   const surveySteps = {
     welcome: {
@@ -56,7 +71,7 @@ function App() {
     },
   };
 
-  const PageRenderer = (route) => {
+  const PageRenderer = ({ route }) => {
     switch (route) {
       case "welcome":
         return <SplashPage />;
@@ -77,16 +92,21 @@ function App() {
     return (
       <div
         className="welcome-splash-container"
-        style={{ margin: "110px auto 0 auto" }}
+        style={{
+          margin: "100px auto 0 auto",
+          width: "auto",
+          maxWidth: "330px",
+        }}
       >
         <div style={{ fontSize: "44px", color: "#3D9245", fontWeight: 600 }}>
           Welcome to NutritionNest
         </div>
+
         <img
           src="/mainLogoIcon.png"
-          style={{ margin: "30px auto", display: "flex", width: "auto" }}
+          style={{ margin: "30px auto", display: "flex", width: "330px" }}
         />
-        <div style={{ maxWidth: "353px", margin: "0 auto" }}>
+        <div style={{ margin: "0 auto" }}>
           <div
             style={{
               margin: "30px auto",
@@ -119,8 +139,25 @@ function App() {
 
   const SignUpPage = () => {
     return (
-      <div style={{ fontSize: "28px", color: "#3D9245", fontWeight: 600 }}>
-        Welcome to NutritionNest
+      <div style={{ margin: "60px auto 0 auto", maxWidth: "350px" }}>
+        <img
+          className="left_chevron_back_arrow"
+          src="/leftChevron.svg"
+          onClick={() => setCurrentPage("welcome")}
+        />
+        <div
+          style={{
+            fontSize: "25px",
+            marginTop: "20px",
+            color: "#3D9245",
+            fontWeight: 600,
+          }}
+        >
+          Welcome to NutritionNest
+        </div>
+        <div style={{ marginTop: "10px" }}>
+          Create an account to get started
+        </div>
       </div>
     );
   };

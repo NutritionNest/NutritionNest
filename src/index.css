@@ -37,3 +37,12 @@ code {
     cursor: pointer;
   }
 }
+
+.left_chevron_back_arrow {
+  display: flex;
+  margin-right: auto;
+  width: auto;
+  &:hover {
+    cursor: pointer;
+  }
+}
