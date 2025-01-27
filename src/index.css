@@ -21,10 +21,10 @@ code {
   border: none;
   margin-top: 25px;
   color: white;
-  font-weight: 800;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 13px;
   &:hover {
-    background-color: rgb(149, 182, 153);
+    background-color: #7aa27f;
     cursor: pointer;
   }
 }

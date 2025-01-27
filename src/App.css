@@ -4,7 +4,6 @@ body {
 
 .app_mobile_background {
   background: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +19,7 @@ body {
 .app_mobile_main_container {
   background-color: white;
   width: 393px;
-  height: 852px;
+  height: 812px;
   margin: 0 auto;
   text-align: center;
   color: rgb(13, 13, 13);
@@ -29,7 +28,7 @@ body {
 }
 .isMobile {
   width: 393px;
-  height: 852px;
+  height: 800px;
 }
 
 .isTablet {
@@ -38,4 +37,59 @@ body {
 }
 
 .isDesktop {
+}
+
+
+.input-box-primary {
+  border-radius: 6px;
+    padding: 10px 10px;
+    border: 1px solid #C9C9C9;
+    margin: 5px 0;
+}
+
+.input-box-primary::placeholder {
+padding: 0 5px;
+font-size: 12px;
+}
+
+.signup-button-container {
+  margin-top: 80px;
+}
+
+.socials-button-container {
+  width: 330px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.socials-button-container > button:hover{
+background: #f6f7f6;
+cursor: pointer;
+}
+
+.socials-button {
+  width: 100%;
+  border: 1px solid #C9C9C9;
+  border-radius: 12px;
+  padding: 6px 0;
+  background-color: white;
+  margin-top: 10px;
+
+}
+
+#apple-button{
+  padding: 10px 0 !important;
+  .socials-button-label-text {
+    margin-left: 10px;
+  }
+}
+.socials-button-content-container {
+  align-items: center;
+  display: flex
+;
+  justify-content: center;
+}
+
+.socials-button-label-text {
+  margin-left:5px
 }
