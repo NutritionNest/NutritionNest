@@ -3,7 +3,7 @@
   "name": "Nutrition Nest",
   "icons": [
     {
-      "src": "/mainLogoIcon.png",
+      "src": "mainLogoIcon.png",
       "type": "image/png",
       "sizes": "393x300"
     },
@@ -11,6 +11,11 @@
       "src": "favicon.ico",
       "type": "image/x-icon",
       "sizes": "64x64 32x32 24x24 15x15"
+    },
+    {
+      "src": "LeftChevron.svg",
+      "type": "image/png",
+      "sizes": "36x36"
     }
   ],
   "start_url": ".",
