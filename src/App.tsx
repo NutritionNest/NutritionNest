@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("signup");
+  const [currentPage, setCurrentPage] = useState("welcome");
 
   // Check the current hostname
   const hostname = window.location.hostname;
