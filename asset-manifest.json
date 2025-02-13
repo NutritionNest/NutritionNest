@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/NutritionNest/static/css/main.a8370762.css",
-    "main.js": "/NutritionNest/static/js/main.85f689d8.js",
+    "main.css": "/NutritionNest/static/css/main.c566ef83.css",
+    "main.js": "/NutritionNest/static/js/main.d4a68342.js",
     "index.html": "/NutritionNest/index.html",
-    "main.a8370762.css.map": "/NutritionNest/static/css/main.a8370762.css.map",
-    "main.85f689d8.js.map": "/NutritionNest/static/js/main.85f689d8.js.map"
+    "main.c566ef83.css.map": "/NutritionNest/static/css/main.c566ef83.css.map",
+    "main.d4a68342.js.map": "/NutritionNest/static/js/main.d4a68342.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8370762.css",
-    "static/js/main.85f689d8.js"
+    "static/css/main.c566ef83.css",
+    "static/js/main.d4a68342.js"
   ]
 }
