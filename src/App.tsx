@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import WelcomePage from "./component/Welcome/WelcomePage.tsx";
 import { PrimaryButtonMedium } from "./component/UIElements/Button/Button.tsx";
-import LoginPage from "./component/Login/LoginPage.tsx";
 import handleNav from "./utils/handleNav.ts";
-import SignUpPageOne from "./component/Signup/SignupPageOne.tsx";
-import SignUpPageTwo from "./component/Signup/SignupPageTwo.tsx";
+import SignUpAndLogIn from "./component/Signup-LogIn/Signup-Login.tsx";
 import "./App.scss";
 
-function App() {
+const App = () => {
   const [currentPage, setCurrentPage] = useState("welcome");
 
   useEffect(() => {
@@ -23,34 +21,35 @@ function App() {
   }, []);
 
   const PageRenderer = ({ route }) => {
-    switch (route) {
-      case "welcome":
-        return <WelcomePage setCurrentPage={setCurrentPage} />;
-      case "signup1":
-        return <SignUpPageOne setCurrentPage={setCurrentPage} />;
-      case "signup2":
-        return <SignUpPageTwo setCurrentPage={setCurrentPage} />;
-      case "placeholder":
-        return (
-          <PrimaryButtonMedium
-            handleClick={handleNav(setCurrentPage, "welcome")}
-            text="back to welcome"
-          />
-        );
-      case "login":
-        return <LoginPage setCurrentPage={setCurrentPage} />;
-      default:
-        return <WelcomePage setCurrentPage={setCurrentPage} />;
+    if (route === "welcome") {
+      return <WelcomePage setCurrentPage={setCurrentPage} />;
+    } else if (route.includes("signup") || route === "login") {
+      return <SignUpAndLogIn route={route} setCurrentPage={setCurrentPage} />;
+    } else if (route === "placeholder") {
+      return (
+        <PrimaryButtonMedium
+          handleClick={handleNav(setCurrentPage, "welcome")}
+          text="back to welcome"
+        />
+      );
+    } else {
+      return <WelcomePage setCurrentPage={setCurrentPage} />;
     }
   };
 
   return (
     <div className="app_mobile_background">
+      {document.location.pathname.includes("demo") && (
+        <img
+          src={process.env.PUBLIC_URL + `/iphone-mock-status-bar.png`}
+          style={{ background: "white" }}
+        />
+      )}
       <div className="app_mobile_main_container">
         <PageRenderer route={currentPage} />
       </div>
     </div>
   );
-}
+};
 
 export default App;

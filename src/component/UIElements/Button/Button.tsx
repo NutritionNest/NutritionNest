@@ -32,7 +32,6 @@ export const BackChevronButton = (props) => {
       className="left_chevron_back_arrow"
       src={process.env.PUBLIC_URL + "/left-chevron.svg"}
       onClick={handleNav(setCurrentPage, route)}
-      style={{ cursor: "pointer" }}
     />
   );
 };
