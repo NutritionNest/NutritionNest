@@ -37,7 +37,8 @@ body {
 .left_chevron_back_arrow {
   display: flex;
   margin-right: auto;
-  width: auto;
+  cursor: pointer;
+  width: 30px;
   &:hover {
     cursor: pointer;
   }
@@ -145,6 +146,19 @@ h3 {
 .input-primary::label {
   padding: 0 5px;
   font-size: 12px;
+}
+
+.signup-login-page-wrapper {
+  margin: 15px auto 0 auto;
+  max-width: 380px;
+}
+
+.signup-login-page-container {
+  max-width: 350px;
+  margin: 30px auto 0 auto;
+}
+
+.signup-login-subpages-container-wrapper {
 }
 
 .signup-button-container {
