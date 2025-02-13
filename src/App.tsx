@@ -41,7 +41,7 @@ const App = () => {
     <div className="app_mobile_background">
       {document.location.pathname.includes("demo") && (
         <img
-          src={process.env.PUBLIC_URL + `/iphone-mock-status-bar.png`}
+          src={process.env.PUBLIC_URL + `/iphone-mock-status-bar.svg`}
           style={{ background: "white" }}
         />
       )}
