@@ -1,8 +1,17 @@
 import React from "react";
 import handleNav from "../../../utils/handleNav.ts";
 
-export const PrimaryButtonMedium = ({ handleClick, text }) => (
-  <button className="primary-button-medium" onClick={handleClick}>
+export const PrimaryButtonMedium = ({
+  handleClick,
+  text,
+  disabled = false,
+}) => (
+  <button
+    type="button"
+    className="primary-button-medium"
+    onClick={handleClick}
+    disabled={disabled}
+  >
     {text}
   </button>
 );

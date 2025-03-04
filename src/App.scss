@@ -147,6 +147,26 @@ h3 {
   padding: 0 5px;
   font-size: 12px;
 }
+.input-error-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.input-error-text {
+  color: var(--Red-90, #c33);
+  font-family: "Inter", serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+
+.input-error-border {
+  border: 1px solid #cc3333;
+}
 
 .signup-login-page-wrapper {
   margin: 15px auto 0 auto;
@@ -211,7 +231,10 @@ cursor: pointer;
 /* LOGIN PAGE BEGINS */
 
 .login-form-container {
-  margin-top: 40px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .login-form {
