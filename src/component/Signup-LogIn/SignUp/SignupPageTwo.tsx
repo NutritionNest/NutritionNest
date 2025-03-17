@@ -86,7 +86,7 @@ const SignUpPageTwo = ({ setCurrentPage }) => {
         error={errors.email && { errorText: errors.email }}
       />
       <TextInput
-        type="tel"
+        type="number"
         placeholder="Phone number"
         value={formData.phoneNumber}
         handleChange={handleChange}
