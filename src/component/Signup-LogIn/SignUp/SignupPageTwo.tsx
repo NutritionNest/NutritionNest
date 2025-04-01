@@ -28,12 +28,12 @@ const SignUpPageTwo = ({ setCurrentPage }) => {
     if (!formData.lastName.trim())
       errorObj.lastName = "One or more characters are required";
     if (!isValidEmail(formData.email))
-      errorObj.email = "Valid email address is required";
+      errorObj.email = "Email format is invalid";
     if (
       !isValidPhone(formData.phoneNumber) ||
       formData.phoneNumber.toString().length < 6
     )
-      errorObj.phoneNumber = "Valid phone number is required";
+      errorObj.phoneNumber = "Phone number is invalid";
     if (formData.password.length === 0) {
       errorObj.password = "At least one symbol (!,+,=,$,#,@)";
     } else if (formData.password.length < 7)

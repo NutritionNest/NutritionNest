@@ -14,10 +14,11 @@ const LogInPage = (props) => {
   const [loginErrors, setlLoginErrors] = useState({});
   const [hasCredentialError, setHasCredentialError] = useState(false);
   const { setCurrentPage } = props;
-
   const handleChange = (e) => {
     setLoginFormData({ ...loginFormData, [e.target.name]: e.target.value });
   };
+
+  // TODO: clean up error logic, there is redundancy in the code
 
   const validateLogin = () => {
     const errorObj: any = {};
@@ -36,7 +37,10 @@ const LogInPage = (props) => {
     const isValidCredentials =
       loginFormData.email === "admin@admin.com" &&
       loginFormData.password === "admin";
-    setHasCredentialError(isValidCredentials); // Set error state based on credentials
+    if (!isValidCredentials) {
+      setHasCredentialError(isValidCredentials); // Set error state based on credentials
+      setlLoginErrors({ password: "Incorrect email or password" });
+    }
     return isValidCredentials; // Return whether credentials are valid
   };
 
@@ -60,7 +64,7 @@ const LogInPage = (props) => {
     } else if (!isValid) {
       setlLoginErrors((prev) => ({
         ...prev,
-        general: "Please check your email and password and try again.",
+        general: "Incorrect email or password",
       }));
     } else {
       setlLoginErrors((prev) => ({
@@ -91,8 +95,6 @@ const LogInPage = (props) => {
         />
         <PrimaryButtonMedium handleClick={handleLogin} text="Log in" />
       </form>
-
-      {loginErrors.general && <h1>{loginErrors.general}</h1>}
 
       <div className="or-divider-container">
         <hr className="divider-line" />
