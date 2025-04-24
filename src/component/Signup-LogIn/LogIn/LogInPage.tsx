@@ -51,9 +51,10 @@ const LogInPage = (props) => {
 
     if (isValid) {
       const correctCredentials = loginProvider(); // Check if credentials are correct
+      // TODO: this needs a check for if a user is a new user, then take the to the "questionnaire" page
       if (correctCredentials) {
         // If credentials are valid, navigate to the placeholder page
-        handleNav(setCurrentPage, "placeholder")();
+        handleNav(setCurrentPage, "questionnaire")();
       } else {
         // If credentials are invalid, show an error
         setlLoginErrors((prev) => ({

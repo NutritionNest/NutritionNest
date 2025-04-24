@@ -10,7 +10,7 @@ import "./App.scss";
 import Questionnaire from "./component/Questionnaire/Questionnaire.tsx";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("questionnaire");
+  const [currentPage, setCurrentPage] = useState("welcome");
 
   useEffect(() => {
     // Check the current hostname
@@ -33,10 +33,12 @@ const App = () => {
       return <Questionnaire setCurrentPage={setCurrentPage} />;
     } else if (route === "placeholder") {
       return (
-        <PrimaryButtonMedium
-          handleClick={handleNav(setCurrentPage, "welcome")}
-          text="back to welcome"
-        />
+        <div style={{ margin: "0 auto", width: "70%" }}>
+          <PrimaryButtonMedium
+            handleClick={handleNav(setCurrentPage, "welcome")}
+            text="Back to Welcome"
+          />
+        </div>
       );
     } else {
       return <WelcomePage setCurrentPage={setCurrentPage} />;
