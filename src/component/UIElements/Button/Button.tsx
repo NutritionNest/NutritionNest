@@ -8,7 +8,7 @@ export const PrimaryButtonMedium = ({
 }) => (
   <button
     type="button"
-    className="primary-button-medium"
+    className={`primary-button-medium ${disabled ? "--is-disabled" : ""}`}
     onClick={handleClick}
     disabled={disabled}
   >

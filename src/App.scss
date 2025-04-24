@@ -35,6 +35,10 @@ body {
     background-color: #7aa27f;
     cursor: pointer;
   }
+
+  &.--is-disabled {
+    background-color: #9eb3a1;
+  }
 }
 
 .primary-text-highlight {
@@ -312,3 +316,109 @@ cursor: pointer;
 }
 
 // SIGNUP PAGE ENDS
+
+// QUESTIONNAIRE PAGE BEGINS
+.onboarding_module_container {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.onboarding_module_progress_container {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  padding: 0 0px;
+  gap: 7px;
+  margin: 20px 0 10px 0;
+}
+
+.onboarding-progress-bar {
+  height: 3px;
+  border-radius: 60px;
+  background: #d5f0d8;
+  width: 50px;
+  cursor: pointer;
+}
+
+.onboarding-progress-bar-completed {
+  background: #3d9245 !important;
+}
+
+.onboarding_module_question-container {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+  width: 100%;
+}
+
+.onboarding_question_header-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", serif;
+  gap: 12px;
+  padding: 10px 0 50px 0;
+}
+
+.onboarding_question_header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #3d9245;
+}
+
+.onboarding_question_header-subtext {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.onboarding_question_completed-image-wrapper {
+  margin: 40px 0 60px 0;
+}
+
+.onboarding_module_question {
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #c9c9c9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.question-checked {
+    border: 2px solid #3d9245 !important;
+  }
+}
+
+.questionnaire-label {
+  text-transform: capitalize;
+  font-family: "Inter", serif;
+  color: #212121;
+  size: 16px;
+}
+
+.number-input-box {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid #c9c9c9;
+  width: 300px;
+  height: 30px;
+}
+
+.number-input-box input:checked {
+  border: 2px solid #3d9245;
+  background: white;
+}
+
+// QUESTIONNAIRE PAGE ENDS

@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import WelcomePage from "./component/Welcome/WelcomePage.tsx";
-import { PrimaryButtonMedium } from "./component/UIElements/Button/Button.tsx";
+import {
+  BackChevronButton,
+  PrimaryButtonMedium,
+} from "./component/UIElements/Button/Button.tsx";
 import handleNav from "./utils/handleNav.ts";
 import SignUpAndLogIn from "./component/Signup-LogIn/Signup-Login.tsx";
 import "./App.scss";
+import Questionnaire from "./component/Questionnaire/Questionnaire.tsx";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("welcome");
+  const [currentPage, setCurrentPage] = useState("questionnaire");
 
   useEffect(() => {
     // Check the current hostname
@@ -25,6 +29,8 @@ const App = () => {
       return <WelcomePage setCurrentPage={setCurrentPage} />;
     } else if (route.includes("signup") || route === "login") {
       return <SignUpAndLogIn route={route} setCurrentPage={setCurrentPage} />;
+    } else if (route === "questionnaire") {
+      return <Questionnaire setCurrentPage={setCurrentPage} />;
     } else if (route === "placeholder") {
       return (
         <PrimaryButtonMedium
